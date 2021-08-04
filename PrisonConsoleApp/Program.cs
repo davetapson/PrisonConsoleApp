@@ -6,8 +6,9 @@ namespace PrisonConsoleApp
     {
         static void Main(string[] args)
         {
-            Batch batch = new();
+            Batch batch = new();  // bad name.  Could be PrisonManager PrisonEngine...  something.
 
+            Console.WriteLine("");
             Console.WriteLine("Welcome to Prison. You can check in, but you can never leave.");
             Console.WriteLine("");
 
