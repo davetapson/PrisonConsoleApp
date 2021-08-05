@@ -12,7 +12,7 @@ namespace PrisonConsoleApp
             Console.WriteLine("Welcome to Prison. You can check in, but you can never leave.");
             Console.WriteLine("");
 
-            bool carryOn = true;           
+            bool carryOn = true;
 
             string input;
 
@@ -21,41 +21,60 @@ namespace PrisonConsoleApp
                 WriteInstructions();
 
                 input = Console.ReadLine();
-                
+
                 switch (input)
                 {
+                    case "a":
                     case "Add P":
                         batch.AddPrisoner();
                         break;
+                    case "b":
                     case "Remove P":
                         batch.RemovePrisoner();
                         break;
+                    case "c":
                     case "Add S":
                         batch.AddStaff();
                         break;
+                    case "d":
                     case "Remove S":
                         batch.RemoveStaff();
                         break;
+                    case "e":
                     case "List P":
                         batch.ListPrisoners();
                         break;
+                    case "f":
                     case "List S":
                         batch.ListStaff();
                         break;
+                    case "g":
                     case "Number P":
-                        batch.ListStaff();
+                        batch.CountPrisoners();
                         break;
+                    case "h":
                     case "Number S":
                         batch.CountStaff();
                         break;
+                    case "i":
                     case "Calculate Wage Bill":
                         batch.CalculateWageBill();
                         break;
+                    case "j":
                     case "Prisoners who should be set free":
                         batch.PrisonersWhoShouldBeLetFree();
                         break;
+                    case "k":
                     case "Staff with next birthday":
                         batch.StaffWithNextBirthday();
+                        break;
+                    case "l":
+                    case "Prisoner List sorted by release date":
+                        batch.PrisonersByReleaseDate();
+                        break;
+                    case "m":
+                    case "Count of staff by Job Type":
+                        batch.CountOfStaffByJobType();
                         break;
                     case "x":
                         carryOn = false;
@@ -70,6 +89,7 @@ namespace PrisonConsoleApp
 
         private static void WriteInstructions()
         {
+            // these can be extended to cover the above, but I'd not bother.
             Console.WriteLine("");
             Console.WriteLine("_______________________________________");
             Console.WriteLine("To add prisoner, enter 'Add P'.");

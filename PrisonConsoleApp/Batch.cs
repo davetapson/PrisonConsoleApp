@@ -10,6 +10,8 @@ namespace PrisonConsoleApp
 
         public Batch()
         {
+            // life is too short to have to add Prisoners / Staff each time you run the app, 
+            // so just auto-generate some on start up.
             Prison = new Prison {
                 Id = 1,
                 Name = "Alcatraz",
@@ -61,7 +63,22 @@ namespace PrisonConsoleApp
             Console.WriteLine($"Prisoner Id: {prisoner.Id} Name: {prisoner.FirstName} {prisoner.LastName} added to prison.");
         }
 
+        internal void CountPrisoners()
+        {
+            throw new NotImplementedException();
+        }
+
         internal void StaffWithNextBirthday()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void PrisonersByReleaseDate()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void CountOfStaffByJobType()
         {
             throw new NotImplementedException();
         }
